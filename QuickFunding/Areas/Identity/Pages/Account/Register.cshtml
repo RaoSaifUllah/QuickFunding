@@ -1,0 +1,113 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_LogLayout";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-lg-10 col-md-10">
+			<div class="app-top-items">
+				<a href="/">
+					<div class="sign-logo" id="logo">
+						<img src="images/logo.png" alt="">
+						<img class="logo-inverse" src="images/logo.png" alt="">
+					</div>
+				</a>
+				<div class="app-top-right-link">
+					Already have an account?<a class="sidebar-register-link" asp-page="./Login">Sign In</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-5 col-lg-6 col-md-7">
+			<div class="registration">
+
+				<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+					<h2 class="registration-title">Sign up to Quick Funding</h2>
+
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class="row mt-3">
+						<div class="col-lg-6 col-md-12">
+							<div class="form-group mt-4">
+								<label asp-for="Input.FirstName">First Name</label>
+								<input asp-for="Input.FirstName" class="form-control h_50"  aria-required="true" />
+
+								<span asp-validation-for="Input.FirstName" class="text-danger"></span>
+
+							
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12">
+							<div class="form-group mt-4">
+								<label asp-for="Input.LastName">Last Name</label>
+								<input asp-for="Input.LastName" class="form-control h_50" aria-required="true" />
+
+								<span asp-validation-for="Input.LastName" class="text-danger"></span>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="form-group mt-4">
+								<label asp-for="Input.Email">Your Email*</label>
+								<input asp-for="Input.Email" class="form-control h_50" autocomplete="username" aria-required="true" />
+								
+								<span asp-validation-for="Input.Email" class="text-danger"></span>
+
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12 ">
+							<div class="form-group mt-4">
+								<div class="field-password">
+									<label asp-for="Input.Password">Password*</label>
+
+								</div>
+								
+								<div class="loc-group position-relative">
+									<input asp-for="Input.Password" class="form-control h_50" autocomplete="new-password" aria-required="true" />
+									<span asp-validation-for="Input.Password" class="text-danger"></span>
+									<span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
+								</div>
+							</div>
+
+							<div class="col-lg-12 col-md-12 mt-3 mb-3">
+								<span class="radio-item">
+									<input type="radio" id="ritema" asp-for="Input.Gender" value="male">
+									<label for="ritema">Male</label>
+								</span>
+
+								<span class="radio-item">
+									<input type="radio" id="ritemb" asp-for="Input.Gender" value="female">
+									<label for="ritemb">Female</label>
+								</span>
+								<span class="radio-item">
+									<input type="radio" id="ritemc" asp-for="Input.Gender" value="others">
+									<label for="ritemc">Others</label>
+								</span>
+							</div>
+
+
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<button class="main-btn btn-hover w-100 mt-4" type="submit">Sign Up</button>
+						</div>
+					</div>
+				</form>
+
+				
+
+				<div class="new-sign-link">
+					Already have an account?<a class="signup-link" href="sign_in.html">Sign In</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,212 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-QuickFunding-b92c503d-eda0-4eff-ae0e-9059c59a78a3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\fonts\bootstrap-icons.woff2" />
+    <None Include="wwwroot\fonts\unicons-0.svg" />
+    <None Include="wwwroot\fonts\unicons-0.woff2" />
+    <None Include="wwwroot\fonts\unicons-1.svg" />
+    <None Include="wwwroot\fonts\unicons-1.woff2" />
+    <None Include="wwwroot\fonts\unicons-10.svg" />
+    <None Include="wwwroot\fonts\unicons-10.woff2" />
+    <None Include="wwwroot\fonts\unicons-11.svg" />
+    <None Include="wwwroot\fonts\unicons-11.woff2" />
+    <None Include="wwwroot\fonts\unicons-12.svg" />
+    <None Include="wwwroot\fonts\unicons-12.woff2" />
+    <None Include="wwwroot\fonts\unicons-13.svg" />
+    <None Include="wwwroot\fonts\unicons-13.woff2" />
+    <None Include="wwwroot\fonts\unicons-14.svg" />
+    <None Include="wwwroot\fonts\unicons-14.woff2" />
+    <None Include="wwwroot\fonts\unicons-15.svg" />
+    <None Include="wwwroot\fonts\unicons-15.woff2" />
+    <None Include="wwwroot\fonts\unicons-16.svg" />
+    <None Include="wwwroot\fonts\unicons-16.woff2" />
+    <None Include="wwwroot\fonts\unicons-17.svg" />
+    <None Include="wwwroot\fonts\unicons-17.woff2" />
+    <None Include="wwwroot\fonts\unicons-18.svg" />
+    <None Include="wwwroot\fonts\unicons-18.woff2" />
+    <None Include="wwwroot\fonts\unicons-19.svg" />
+    <None Include="wwwroot\fonts\unicons-19.woff2" />
+    <None Include="wwwroot\fonts\unicons-2.svg" />
+    <None Include="wwwroot\fonts\unicons-2.woff2" />
+    <None Include="wwwroot\fonts\unicons-20.svg" />
+    <None Include="wwwroot\fonts\unicons-20.woff2" />
+    <None Include="wwwroot\fonts\unicons-21.svg" />
+    <None Include="wwwroot\fonts\unicons-21.woff2" />
+    <None Include="wwwroot\fonts\unicons-22.svg" />
+    <None Include="wwwroot\fonts\unicons-22.woff2" />
+    <None Include="wwwroot\fonts\unicons-23.svg" />
+    <None Include="wwwroot\fonts\unicons-23.woff2" />
+    <None Include="wwwroot\fonts\unicons-24.svg" />
+    <None Include="wwwroot\fonts\unicons-24.woff2" />
+    <None Include="wwwroot\fonts\unicons-25.svg" />
+    <None Include="wwwroot\fonts\unicons-25.woff2" />
+    <None Include="wwwroot\fonts\unicons-26.svg" />
+    <None Include="wwwroot\fonts\unicons-26.woff2" />
+    <None Include="wwwroot\fonts\unicons-27.svg" />
+    <None Include="wwwroot\fonts\unicons-27.woff2" />
+    <None Include="wwwroot\fonts\unicons-28.svg" />
+    <None Include="wwwroot\fonts\unicons-28.woff2" />
+    <None Include="wwwroot\fonts\unicons-29.svg" />
+    <None Include="wwwroot\fonts\unicons-29.woff2" />
+    <None Include="wwwroot\fonts\unicons-3.svg" />
+    <None Include="wwwroot\fonts\unicons-3.woff2" />
+    <None Include="wwwroot\fonts\unicons-30.svg" />
+    <None Include="wwwroot\fonts\unicons-30.woff2" />
+    <None Include="wwwroot\fonts\unicons-31.svg" />
+    <None Include="wwwroot\fonts\unicons-31.woff2" />
+    <None Include="wwwroot\fonts\unicons-32.svg" />
+    <None Include="wwwroot\fonts\unicons-32.woff2" />
+    <None Include="wwwroot\fonts\unicons-33.svg" />
+    <None Include="wwwroot\fonts\unicons-33.woff2" />
+    <None Include="wwwroot\fonts\unicons-34.svg" />
+    <None Include="wwwroot\fonts\unicons-34.woff2" />
+    <None Include="wwwroot\fonts\unicons-35.svg" />
+    <None Include="wwwroot\fonts\unicons-35.woff2" />
+    <None Include="wwwroot\fonts\unicons-36.svg" />
+    <None Include="wwwroot\fonts\unicons-36.woff2" />
+    <None Include="wwwroot\fonts\unicons-37.svg" />
+    <None Include="wwwroot\fonts\unicons-37.woff2" />
+    <None Include="wwwroot\fonts\unicons-4.svg" />
+    <None Include="wwwroot\fonts\unicons-4.woff2" />
+    <None Include="wwwroot\fonts\unicons-5.svg" />
+    <None Include="wwwroot\fonts\unicons-5.woff2" />
+    <None Include="wwwroot\fonts\unicons-6.svg" />
+    <None Include="wwwroot\fonts\unicons-6.woff2" />
+    <None Include="wwwroot\fonts\unicons-7.svg" />
+    <None Include="wwwroot\fonts\unicons-7.woff2" />
+    <None Include="wwwroot\fonts\unicons-8.svg" />
+    <None Include="wwwroot\fonts\unicons-8.woff2" />
+    <None Include="wwwroot\fonts\unicons-9.svg" />
+    <None Include="wwwroot\fonts\unicons-9.woff2" />
+    <None Include="wwwroot\images\clock.svg" />
+    <None Include="wwwroot\images\dark-logo.svg" />
+    <None Include="wwwroot\images\e-learning.svg" />
+    <None Include="wwwroot\images\health-and-welbeing.svg" />
+    <None Include="wwwroot\images\icons\in.svg" />
+    <None Include="wwwroot\images\logo-icon.svg" />
+    <None Include="wwwroot\images\logo.svg" />
+    <None Include="wwwroot\images\sign-logo.svg" />
+    <None Include="wwwroot\images\standard-webinar.svg" />
+    <None Include="wwwroot\images\sun-01.svg" />
+    <None Include="wwwroot\images\talk-show.svg" />
+    <None Include="wwwroot\js\analytics.js" />
+    <None Include="wwwroot\js\chart-1.js" />
+    <None Include="wwwroot\js\chart-pie.js" />
+    <None Include="wwwroot\js\chart-views.js" />
+    <None Include="wwwroot\js\chart.js" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\datepicker.js" />
+    <None Include="wwwroot\js\datepicker.min.js" />
+    <None Include="wwwroot\js\i18n\datepicker.cs.js" />
+    <None Include="wwwroot\js\i18n\datepicker.da.js" />
+    <None Include="wwwroot\js\i18n\datepicker.de.js" />
+    <None Include="wwwroot\js\i18n\datepicker.en.js" />
+    <None Include="wwwroot\js\i18n\datepicker.es.js" />
+    <None Include="wwwroot\js\i18n\datepicker.fi.js" />
+    <None Include="wwwroot\js\i18n\datepicker.fr.js" />
+    <None Include="wwwroot\js\i18n\datepicker.hu.js" />
+    <None Include="wwwroot\js\i18n\datepicker.nl.js" />
+    <None Include="wwwroot\js\i18n\datepicker.pl.js" />
+    <None Include="wwwroot\js\i18n\datepicker.pt-BR.js" />
+    <None Include="wwwroot\js\i18n\datepicker.pt.js" />
+    <None Include="wwwroot\js\i18n\datepicker.ro.js" />
+    <None Include="wwwroot\js\i18n\datepicker.sk.js" />
+    <None Include="wwwroot\js\i18n\datepicker.zh.js" />
+    <None Include="wwwroot\js\jquery-3.6.0.js" />
+    <None Include="wwwroot\js\jquery-3.6.0.min.js" />
+    <None Include="wwwroot\js\jquery-steps.min.js" />
+    <None Include="wwwroot\js\jquery.mCustomScrollbar.concat.min.js" />
+    <None Include="wwwroot\js\jquery.mCustomScrollbar.js" />
+    <None Include="wwwroot\js\mock-api.js" />
+    <None Include="wwwroot\js\night-mode.js" />
+    <None Include="wwwroot\js\popper.min.js" />
+    <None Include="wwwroot\js\Scrollbar.js" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\test-timer.js" />
+    <None Include="wwwroot\js\timer.js" />
+    <None Include="wwwroot\js\vertical-responsive-menu.js" />
+    <None Include="wwwroot\js\vertical-responsive-menu.min.js" />
+    <None Include="wwwroot\sass\import\mixins.scss" />
+    <None Include="wwwroot\sass\import\variables.scss" />
+    <None Include="wwwroot\sass\rating.scss" />
+    <None Include="wwwroot\sass\vertical-responsive-menu.scss" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\.gitattributes" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\.gitignore" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\.jshintrc" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\.npmignore" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\.travis.yml" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\Gruntfile.js" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\LICENSE" />
+    <None Include="wwwroot\vendor\bootstrap-datetimepicker\minify.sh" />
+    <None Include="wwwroot\vendor\bootstrap-select\.github\FUNDING.yml" />
+    <None Include="wwwroot\vendor\bootstrap-select\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include="wwwroot\vendor\bootstrap-select\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include="wwwroot\vendor\bootstrap-select\.github\move.yml" />
+    <None Include="wwwroot\vendor\bootstrap-select\CONTRIBUTING.md" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\.editorconfig" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\.github\workflows\nodejs.yml" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\.gitignore" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\.travis.yml" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\CHANGELOG.md" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\Gruntfile.js" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\LICENSE" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\README.md" />
+    <None Include="wwwroot\vendor\chartist-plugin-tooltip\yarn.lock" />
+    <None Include="wwwroot\vendor\chartist\.doclets.yml" />
+    <None Include="wwwroot\vendor\chartist\.editorconfig" />
+    <None Include="wwwroot\vendor\chartist\.gitattributes" />
+    <None Include="wwwroot\vendor\chartist\.github\FUNDING.yml" />
+    <None Include="wwwroot\vendor\chartist\.gitignore" />
+    <None Include="wwwroot\vendor\chartist\.jshintrc" />
+    <None Include="wwwroot\vendor\chartist\.nvmrc" />
+    <None Include="wwwroot\vendor\chartist\.travis.yml" />
+    <None Include="wwwroot\vendor\chartist\CHANGELOG.md" />
+    <None Include="wwwroot\vendor\chartist\CODINGSTYLE.md" />
+    <None Include="wwwroot\vendor\chartist\Gruntfile.js" />
+    <None Include="wwwroot\vendor\chartist\LICENSE-MIT" />
+    <None Include="wwwroot\vendor\chartist\README.md" />
+    <None Include="wwwroot\vendor\charts\Chart.min.js" />
+    <None Include="wwwroot\vendor\ckeditor5\ckeditor.js" />
+    <None Include="wwwroot\vendor\ckeditor5\ckeditor.js.map" />
+    <None Include="wwwroot\vendor\ckeditor5\LICENSE.md" />
+    <None Include="wwwroot\vendor\ckeditor5\README.md" />
+    <None Include="wwwroot\vendor\mixitup\.jscsrc" />
+    <None Include="wwwroot\vendor\mixitup\.travis.yml" />
+    <None Include="wwwroot\vendor\mixitup\CHANGELOG.md" />
+    <None Include="wwwroot\vendor\mixitup\README.md" />
+    <None Include="wwwroot\vendor\OwlCarousel\owl.carousel.min.js" />
+    <None Include="wwwroot\vendor\OwlCarousel\README.md" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.babelrc" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\autotag.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\npm-publish-pro.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\npm-publish-rc-pro.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\npm-publish-rc.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\npm-publish.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.github\workflows\update-icons.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.gitlab-ci.yml" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\.npmignore" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\LICENSE" />
+    <None Include="wwwroot\vendor\unicons-2.0.1\README.md" />
+  </ItemGroup>
+
+</Project>

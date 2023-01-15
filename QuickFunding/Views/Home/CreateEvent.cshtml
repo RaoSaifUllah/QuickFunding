@@ -1,0 +1,263 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+	<div class="hero-banner">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-7 col-lg-9 col-md-10">
+					<div class="hero-banner-content">
+						<h2>FUNDRAISING MADE EASY</h2>
+
+						<h3>Create Campaign</h3>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-10 col-md-10 m-auto">
+		<div class="wizard-steps-block mt-0">
+			<div id="add-event-tab" class="step-app">
+				<ul class="step-steps">
+					<li class="active">
+						<a href="/NewCampaign">
+							<span class="number"></span>
+							<span class="step-name">Details</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="number"></span>
+							<span class="step-name">Type</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="number"></span>
+							<span class="step-name">Media</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="number"></span>
+							<span class="step-name">Description</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="event-dt-block mb-5">
+		<div class="container">
+			<div class="row">
+				<div class="main-card">
+					<div class="bp-title">
+						<h4><i class="fa-solid fa-circle-info step_icon me-3"></i>Details</h4>
+					</div>
+					<div class="p-4 bp-form main-form">
+						<form method="post" novalidate="novalidate">
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-5 me-auto">
+										<label class="form-label fs-16">Add a title.*</label>
+										<p class="mt-2 fs-14 d-block mb-3">Give your campaign a title that inspires. <br> <button type="button" class="btn border-bottom border-dotted p-0 my-2" data-explain-section="campaign-title" onclick="if (!window.__cfRLUnblockHandlers) return false; showHideSection(this)">Tips</button> </p>
+										<p class="mt-2 fs-14 d-block mb-3 alert alert-info rounded my-3 d-none" id="campaign-title">
+											A good title can make your campaign stand out. Identify your project, ask for help, and use a personal tone. You can include:
+											<br><br>
+											The name of the person, group, or organization that needs help e.g. Animal Sanctuary.<br>
+											A call to action e.g. Please help...<br>
+											A personal connection, detail or tone e.g. Please fund the rehabilitation of these rescue...
+										</p>
+									</div>
+									<div class="col-md-6">
+										<input class="form-control h_50" type="text" placeholder="Enter event name here" data-val="true" data-val-length="This Name must be less then 80" data-val-length-max="80" data-val-required="Campaign name is required" id="Name" maxlength="80" name="Name" value="">
+										<span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-4 me-auto">
+										<label class="form-label fs-16">Choose a cause for your campaign.*</label>
+										<p class="mt-2 d-block fs-14 mb-3">Choosing relevant cause helps to improve the discoverability of your campaign.</p>
+									</div>
+									<div class="col-md-6">
+										<select class="form-select form-control py-3" onchange="if (!window.__cfRLUnblockHandlers) return false; getSubCauses(this)" data-val="true" data-val-range="Cause is required" data-val-range-max="2147483647" data-val-range-min="1" data-val-required="The CauseId field is required." id="CauseId" name="CauseId">
+											<option>Select Cause</option>
+											<option value="1">Sports</option>
+											<option value="2">Education</option>
+											<option value="3">Clubs &amp; Community</option>
+											<option value="5">Run/Walk/Rides</option>
+											<option value="6">Trips &amp; Adventures</option>
+											<option value="7">Medical &amp; Health</option>
+											<option value="8">Fun &amp; Special Events</option>
+											<option value="9">Religious Organizations</option>
+										</select>
+										<span class="text-danger field-validation-valid" data-valmsg-for="CauseId" data-valmsg-replace="true"></span>
+									</div>
+								</div>
+								<div class="row py-3">
+									<div class="col-md-4 me-auto">
+										<label class="form-label fs-16">Choose a subcause for your campaign.</label>
+										<p class="mt-2 d-block fs-14 mb-3"></p>
+									</div>
+									<div class="col-md-6">
+										<select class="form-select form-control py-3" id="SubCause" name="SubCause">
+											<option>Select SubCause</option>
+										</select>
+										<span class="text-danger field-validation-valid" data-valmsg-for="SubCause" data-valmsg-replace="true"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-5 me-auto">
+										<label class="form-label fs-16">Give your campaign collection target.*</label>
+										<p class="mt-2 d-block fs-14 mb-3">Add a target amount you want to collect in this campaign</p>
+									</div>
+									<div class="col-md-6">
+										<input class="form-control h_50" type="number" placeholder="Collection i.e 5000" data-val="true" data-val-number="The field Tagert must be a number." data-val-range="Target amount must be greater then 1" data-val-range-max="2147483647" data-val-range-min="1" data-val-required="The Tagert field is required." id="Tagert" name="Tagert" value="0">
+										<span class="text-danger field-validation-valid" data-valmsg-for="Tagert" data-valmsg-replace="true"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-5 me-auto">
+										<label class="form-label fs-16">Allow word of support.*</label>
+										<p class="mt-2 d-block fs-14 mb-3">If this is active your donors are allowed to write some lines of support. Word of support or comments by the donor will be displayed on campaign details page.</p>
+									</div>
+									<div class="col-md-6">
+										<label class="btn-switch m-0 ml-2">
+											<input type="checkbox" id="DonationType" checked="checked" data-val="true" data-val-required="The AllComments field is required." name="AllComments" value="true">
+											<span class="checkbox-slider"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-5 me-auto">
+										<label class="form-label fs-16">Fixed Donations</label>
+										<p class="mt-2 d-block fs-14 mb-3">Add fixed donation buttons so your donor can select the button and donate.</p>
+									</div>
+									<div class="col-md-6">
+										<div class="bootstrap-tagsinput"><input type="text" placeholder="i.e 5,10,50"></div><input class="form-control h_50" type="text" placeholder="i.e 5,10,50" data-role="tagsinput" id="FixedDonations" name="FixedDonations" value="" style="display: none;">
+										<span class="text-danger field-validation-valid" data-valmsg-for="FixedDonations" data-valmsg-replace="true"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group border_bottom pb_30">
+								<div class="row py-3">
+									<div class="col-md-4 me-auto">
+										<label class="form-label fs-16">How you want to end you campaign?</label>
+										<p class="mt-2 d-block fs-14 mb-3"></p>
+									</div>
+									<div class="col-md-6">
+										<div class="form-check my-4">
+											<input class="form-check-input" type="radio" id="NoDeadline" value="NoDeadline" checked="" data-val="true" data-val-required="The CloseType field is required." name="CloseType">
+											<label class="form-check-label ms-2" for="NoDeadline">
+												<strong>No Deadline</strong>
+											</label>
+										</div>
+										<div class="form-check my-4">
+											<input class="form-check-input" type="radio" id="TargetAchived" value="TargetAchived" name="CloseType">
+											<label class="form-check-label ms-2" for="TargetAchived">
+												<strong>Target Achived</strong>
+											</label>
+										</div>
+										<div class="form-check my-4">
+											<input class="form-check-input my-3" type="radio" id="AfterDays" value="AfterDays" name="CloseType">
+											<label class="form-check-label ms-2" for="AfterDays">
+												<div class="input-group mb-3">
+													<span class="input-group-text" id="basic-AfterDays">After Days</span>
+													<input class="form-control py-3" id="basic-AfterDays" aria-describedby="basic-AfterDays" type="number" data-val="true" data-val-range="Field must be greater then 0" data-val-range-max="2147483647" data-val-range-min="0" data-val-required="The Days field is required." name="Days" value="0">
+													<span class="text-danger field-validation-valid" data-valmsg-for="Days" data-valmsg-replace="true"></span>
+												</div>
+											</label>
+										</div>
+										<div class="form-check my-4">
+											<input class="form-check-input my-3" type="radio" id="ToDate" value="ToDate" name="CloseType">
+											<label class="form-check-label ms-2" for="ToDate">
+												<div class="input-group mb-3">
+													<span class="input-group-text" id="basic-ToDate">To Date</span>
+													<input type="datetime-local" class="form-control py-3" id="basic-ToDate" aria-describedby="basic-ToDate" data-val="true" data-val-required="The ToDate field is required." name="ToDate" value="2022-11-27T07:38:22.488">
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4><i class="fa-solid fa-circle-info step_icon me-3"></i>Campaign Descriptions</h4>
+						</form>
+					</div>
+					<div class="p-4 bp-form main-form">
+
+						<input type="hidden" name="id" value="15">
+						<input type="hidden" name="popup" value="1">
+						<div class="form-group border_bottom pb_30">
+							<div class="row">
+								<div class="col-md-5 me-auto">
+									<label class="form-label fs-16">Write short description.</label>
+									<p class="mt-2 fs-14 d-block mb-3">Introduce what you want to accomplish in 255 characters or less. <br> <button type="button" class="btn border-bottom border-dotted p-0 my-2" data-explain-section="explain-short-description" onclick="if (!window.__cfRLUnblockHandlers) return false; showHideSection(this)" data-cf-modified-6d5ebdf37d63190df9182284-="">Why so short?</button> </p>
+									<p class="mt-2 fs-14 d-block mb-3 alert alert-info rounded my-3 d-none" id="explain-short-description">
+										This will be a brief introduction to your campaign that's shared on social media and elsewhere. Make it compelling and make sure to include a call to action.
+										You can tell your complete story in the next step with as many words and pictures as you'd like.
+									</p>
+								</div>
+								<div class="col-md-6">
+									<div class="mt-4">
+										<textarea class="form-textarea" placeholder="Short description will go here" data-val="true" data-val-length="The ShortDescription must be at max 255 characters long." data-val-length-max="255" id="ShortDescription" maxlength="255" name="ShortDescription"></textarea>
+									</div>
+									<small><small class="text-dark" id="short-description-counter"></small> / 255</small>
+								</div>
+							</div>
+						</div>
+						<div class="form-group border_bottom pb_30">
+							<div class="row">
+								<div class="col-md-5 me-auto">
+									<label class="form-label fs-16">Please describe your campaign breifly.</label>
+									<p class="mt-2 fs-14 d-block mb-3">Tell the world about your project. <br> <button type="button" class="btn border-bottom border-dotted p-0 my-2" data-explain-section="explain-description" onclick="if (!window.__cfRLUnblockHandlers) return false; showHideSection(this)" data-cf-modified-6d5ebdf37d63190df9182284-="">More Tips?</button> </p>
+									<div class="mt-2 fs-14 d-block mb-3 alert alert-info rounded my-3 d-none" id="explain-description">
+										<p>An effective story <i>informs</i> and <i>inspires</i>. Here are 5 storytelling steps you should include:</p>
+										<ul style="margin-top: 10px;">
+											<li>1- Describe the problem you are trying to solve</li>
+											<li>2- Describe the solution to the problem</li>
+											<li>3- Point out the gap or barrier to better outcomes</li>
+											<li>4- Make supporters the heroes of the story by showing their impact</li>
+											<li>5- Explain to the supporter what they will get in exchange for their donation.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="text-editor mt-4">
+										<textarea class="form-textarea" placeholder="Description will go here" id="ExplainCampaign" name="ExplainCampaign"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="step-footer step-tab-pager my-3">
+							<button type="button" data-url-href="NewCampaign/15/Media" onclick="if (!window.__cfRLUnblockHandlers) return false; descriptionLocalStorage(this)" class="btn btn-default btn-hover steps_btn" data-cf-modified-6d5ebdf37d63190df9182284-="">Back</button>
+							<button type="submit" class="btn btn-default btn-hover steps_btn ms-2">Finish</button>
+						</div>
+
+
+
+
+
+
+
+						<div class="step-footer step-tab-pager mt-4">
+							<button type="submit" class="btn btn-default btn-hover steps_btn">Next</button>
+						</div>
+						<input name="__RequestVerificationToken" type="hidden" value="CfDJ8BPe6sAEZ-BOqLDQbIySFq9tAfusLVZapNRlhRX2qoIE1ZKBEiCIvoJSmr5vTetoEhruE9KzPEF_JUOR3jvXSaFbyKF2FornGlHWrCZETQZS_mlvM00A3lzxDlyFwYxGTPOr1Mh8irqqAgI5kyEUjDxBEm54P3J4hDf6MlCwFnhNV0exizgp3XJG4AqRygaryg"><input name="AllComments" type="hidden" value="false">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

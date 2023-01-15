@@ -1,0 +1,74 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "_LogLayout";
+}
+
+
+        <section>
+           
+
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10 col-md-10">
+							<div class="app-top-items">
+								<a href="index.html">
+									<div class="sign-logo" id="logo">
+										<img src="images/logo.png" alt="">
+										<img class="logo-inverse" src="images/logo.png" alt="">
+									</div>
+								</a>
+								<div class="app-top-right-link">
+									New to Quick Funding?<a class="sidebar-register-link" href="sign_up.html">Sign up</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-5 col-lg-6 col-md-7">
+							<div class="registration">
+							<form id="account" method="post">
+								<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+									<h2 class="registration-title">Sign in to Quick Funding</h2>
+									<div class="form-group mt-5">
+										<label asp-for="Input.Email" class="form-label">Your Email*</label>
+
+										<input asp-for="Input.Email" class="form-control form-control h_50" autocomplete="username" aria-required="true" placeholder="Enter Your Email " />
+										<span asp-validation-for="Input.Email" class="text-danger"></span>
+									</div>
+									<div class="form-group mt-4">
+										<div class="field-password">
+
+											<label asp-for="Input.Password" class="form-label">Password*</label>
+											
+											
+											
+										</div>
+										<div class="loc-group position-relative">
+											<input asp-for="Input.Password" class="form-control h_50" autocomplete="current-password" placeholder="Enter your password" aria-required="true" />
+
+											<span asp-validation-for="Input.Password" class="text-danger"></span>
+											<span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
+
+								<a id="forgot-password-link" asp-page="./ForgotPassword">Forgot your password?</a>
+										</div>
+									</div>
+									<button class="main-btn btn-hover w-100 mt-4" type="submit">Sign In <i class="fas fa-sign-in-alt ms-2"></i></button>
+								</form>
+								<div class="divider">
+									<span> </span>
+								</div>
+								<div class="new-sign-link">
+									New to Quick Funding?<a class="signup-link" asp-page="./Register">Sign up</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+                
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
