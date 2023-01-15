@@ -155,14 +155,18 @@
 											<img src="images/profile-imgs/img-13.jpg" alt="">
 										</div>
 										<!--<h5>@User.Identity.Name</h5>-->
-										<p>@User.Identity.Name</p>
+										<p>@User.Identity?.Name</p>
 									</div>
 								</li>
 								<li class="profile-link">
 									<a href="my_organisation_dashboard.html" class="link-item">My Organisation</a>
 									<a href="home/OrganiserProfile" class="link-item">My Profile</a>									
-									<a href="identity/account/login" class="link-item">Sign Out</a>									
-								</li>
+									<!--<a href="identity/account/login" class="link-item">Sign Out</a>-->
+										<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+											<button type="submit" class="nav-link btn btn-link link-item text-dark">Logout</button>
+										</form>
+
+									</li>
 							</ul>
 						</li>
 						<li>

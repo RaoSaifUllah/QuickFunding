@@ -73,10 +73,23 @@
 	<script src="js/custom.js"></script>
 	<script src="js/night-mode.js"></script>
 
+	<script src="js/pages-auth.js"></script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+	<script>
+		$('.fa-eye-slash').on('click', function () {
+			$(this).removeClass('fa-eye-slash');
+			$(this).addClass('fa-eye');
+			$('#Input_Password').attr('type', 'text');
+		})
+		$('.fa-eye').on('click', function () {
+			$(this).removeClass('fa-eye');
+			$(this).addClass('fa-eye-slash');
+			$('#Input_Password').attr('type', 'password');
+		})
+	</script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

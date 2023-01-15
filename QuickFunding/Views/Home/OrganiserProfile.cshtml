@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+
 }
 <div class="wrapper">
 		<div class="profile-banner">
@@ -33,7 +34,7 @@
 								</div>
 								<div class="user-dts">
 									<h4 class="user-name">Profile Name<span class="verify-badge"><i class="fa-solid fa-circle-check"></i></span></h4>
-									<span class="user-email">abc@example.com</span>
+									<span class="user-email">@User.Identity?.Name</span>
 								</div>
 							
 							

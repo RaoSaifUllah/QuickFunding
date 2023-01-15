@@ -28,7 +28,7 @@ namespace QuickFunding.Controllers
 
             return View();
         }
-
+        [Authorize]
         public IActionResult OrganiserProfile()
         {
             return View();
@@ -41,6 +41,7 @@ namespace QuickFunding.Controllers
 		{
 			return View();
 		}
+      //  [Route("pages/contact-us")]
 		public IActionResult ContactUs()
 		{
 			return View();
